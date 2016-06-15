@@ -1,0 +1,10 @@
+<?php $this->load->view('main/sections/scroll_down'); ?>
+<?php $this->load->view('main/sections/beranda/covered'); ?>
+<?php $this->load->view('main/sections/beranda/creation'); ?>
+<?php $this->load->view('main/sections/beranda/place'); ?>
+<?php $this->load->view('main/sections/beranda/alumni'); ?>
+<?php $this->load->view('main/sections/beranda/why'); ?>
+<?php $this->load->view('main/sections/beranda/student'); ?>
+<?php $this->load->view('main/sections/beranda/course'); ?>
+<?php $this->load->view('main/sections/beranda/service'); ?>
+<?php $this->load->view('main/sections/beranda/client'); ?>

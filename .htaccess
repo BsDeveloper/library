@@ -1,0 +1,90 @@
+
+RewriteOptions inherit
+RewriteEngine On
+
+RewriteCond %{HTTP_HOST} !^(www|subdomain) [NC]
+RewriteRule ^(.*)$ http://www.babastudio.com/$1 [L,R=301]
+
+RedirectMatch "^/blog/wp-content/(.*)" "http://www.babastudio.com/old-blog/wp-content/$1"
+
+RewriteBase /
+
+RewriteCond %{REQUEST_URI} ^system.*
+RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+RewriteCond %{REQUEST_URI} ^application.*
+RewriteRule ^(.*)$ /index.php?/$1 [L]
+
+RewriteCond $1 !^(uploads|settings|old-blog|kontes-seo|surabaya|member|images|gallery|files|assets|robots\.txt|sitemap\.xml)
+
+RewriteCond %{REQUEST_FILENAME} !-f
+#RewriteCond %{REQUEST_FILENAME} !-d
+
+RewriteRule ^(.*)$ index.php?/$1 [L]
+RewriteCond %{HTTP_HOST} ^babastudio\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.babastudio\.com$
+RewriteRule ^training\/belajar_php$ "http\:\/\/www\.babastudio\.com\/training\/kursus_web_design" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^babastudio\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.babastudio\.com$
+RewriteRule ^webdesignjakarta\/$ "http\:\/\/www\.babastudio\.com\/training\/kursus_web_design\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^babastudio\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.babastudio\.com$
+RewriteRule ^member\/$ "http\:\/\/www\.babastudio\.com\/member\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^babastudio\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.babastudio\.com$
+RewriteRule ^baru\/$ "http\:\/\/www\.babastudio\.com\/baru\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^babastudio\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.babastudio\.com$
+RewriteRule ^baru2\/$ "http\:\/\/www\.babastudio\.com\/baru2\/" [R=301,L]
+
+RewriteCond %{HTTP_HOST} ^babastudio\.com$ [OR]
+RewriteCond %{HTTP_HOST} ^www\.babastudio\.com$
+RewriteRule ^hosting$ "https\:\/\/client\.jr\-webhost\.net\/cart\.php\?a\=add\&pid\=404" [R=301,L]
+
+Redirect 301 /becconected http://www.babastudio.com/beconnected
+
+# Block Russian Referrer Spam
+RewriteEngine on
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly.\.ru/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.org/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*ilovevitaly\.info/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*iloveitaly\.ru/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*econom\.co/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*savetubevideo\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*kambasoft\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*buttons\-for\-website\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*semalt\.com/ [NC,OR]
+RewriteCond %{HTTP_REFERER} ^http://.*darodar\.com/ [NC]
+RewriteRule ^(.*)$ – [F,L]
+
+
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+# Enable expirations
+ExpiresActive On 
+# Default directive
+ExpiresDefault "access plus 2 weeks"
+# My favicon
+ExpiresByType image/x-icon "access plus 1 year"
+# Images
+ExpiresByType image/gif "access plus 1 month"
+ExpiresByType image/png "access plus 1 month"
+ExpiresByType image/jpg "access plus 1 month"
+ExpiresByType image/jpeg "access plus 1 month"
+# CSS
+ExpiresByType text/css "access plus 1 month"
+# Javascript
+ExpiresByType application/javascript "access plus 1 month"
+# Other
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType application/xml "access plus 1 month"
+ExpiresByType application/x-font-woff "access plus 365 days"
+</IfModule>
+## EXPIRES CACHING ##
