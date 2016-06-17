@@ -1,0 +1,89 @@
+.bs-other-course {
+	color: $clr-white-o9;
+	@include bg-overlay($clr-black-o5);
+	@include bg-parallax("../img/full/bg_bs_creation.jpg");
+
+	.image {
+		text-align: center;
+		img {
+			display: inline-block;
+		}
+	}
+
+	.desc {
+		h3 {
+			color: #fff;
+		}
+		.phone {
+			position: relative;
+			min-height: 50px;
+			padding: 10px 10px;
+			background-color: $clr-blue;
+			display: inline-block;
+			padding-left: 65px;
+			font-size: 24px;
+			margin-bottom: 15px;
+			font-weight: 500;
+
+			.icon {
+				text-align: center;
+				position: absolute;
+				height: 100%;
+				top: 0;
+				left: 0;
+				width: 50px;
+				background-color: $clr-blue-dark;
+			}
+		}
+	}
+}
+
+.bs-they-say {
+	.say {
+		text-align: center;
+		margin-top: 15px;
+	}
+}
+
+.bs-leader-say {
+	.leader-say {
+		background-color: #fff;
+		padding: 10px 15px;
+		border: 1px solid $clr-border;
+
+		.foto {
+			height: 85px;
+			width: 75px;
+			float: left;
+			margin-right: 15px;
+			margin-bottom: 5px;
+			margin-top: 5px;
+		}
+		.desc {
+
+		}
+	}
+
+	.more {
+		border-right: 1px solid $clr-border;
+		border-left: 1px solid $clr-border;
+		border-bottom: 1px solid $clr-border;
+		background-color: #fff;
+		padding: 10px 15px;
+		font-weight: 500;
+	}
+}
+.bs-leader-say {
+
+	.bc-right-img {
+		background-color: #fff;
+		.bc-inner {
+			.image {
+				.thumb {
+					min-height: 200px;
+				}		
+			}
+		}
+		
+	}
+}

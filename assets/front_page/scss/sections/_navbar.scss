@@ -1,0 +1,684 @@
+/* ========================================================================= */
+/*  Navigation Bar Style
+/* ========================================================================= */
+.shape-header {
+	display: none;
+	@include mq($from: tablet) {
+		display: block;
+		position: absolute;
+		bottom: 0;
+		right: -75px;
+		height: 50px;
+		width: auto;	
+	}
+	
+}
+.navbar {
+	border-top: 4px solid $clr-blue;
+	position: absolute;
+	z-index: 100;
+	width: 100%;
+	color: #fff;
+	.navicon {
+		text-align: center;
+		display: inline-block;
+		background: $clr-blue;
+		color: #fff;
+		cursor: pointer;
+		&:hover, &.active {
+			color: $clr-blue-dark;
+		}		
+	}
+}
+
+.top-nav {
+	@include mq($until: tablet) {
+		background: $clr-blue-dark;
+	}
+	.bg-top-nav {
+		position: absolute;
+		height: 45px;
+		width: 100%;
+		display: block;
+		background: $clr-blue-dark;
+		z-index: -1;
+	}
+	.inner-nav {
+		width: 100%;
+		@include clearfix;
+		@include mq($from: tablet) {
+			padding-left: 269px;
+			padding-right: 45px;
+		}
+
+		.logo {
+			position: relative;
+			width: 100%;
+			text-align: center;
+			background-color: #031826;
+			display: inline-block;
+			padding-top: 20px;
+			padding-bottom: 5px;
+			@include mq($from: tablet) {
+				padding-bottom: 25px;
+				height: 95px;
+				width: 269px;
+				margin-left: -269px;
+				float: left;
+				&:before {
+					content: " ";
+					position: absolute;
+					width: 1000px;
+					left: -1000px;
+					top: 0;
+					background-color: inherit;
+					display: block;
+					height: 100%;
+				}
+			}
+			.img-logo {
+				display: inline-block;
+			}
+		}
+
+		.search-form {
+			position: relative;
+			padding-right: 72px; //add
+			@include clearfix;
+			@include mq($from: tablet) {
+				float: right;
+				padding-right: 0;
+				margin-right: -45px;
+				background: transparent;
+			}
+			.search-box {
+				float: left;//add
+				width: 100%;
+				min-width: 100%;
+				max-width: 100%;
+				padding-top: 12px;
+				padding-bottom: 12px;
+				padding-right: 12px;
+				@include transition-all(.3s);
+
+				@include mq($from: tablet) {
+					padding: 12px;
+					background-color: $clr-blue-dark;
+					min-width: 300px;
+					display: block;
+					position: absolute;
+					right: 0;
+					top: 45px + 10px;
+					z-index: 100;
+					opacity: 0;
+					max-height: 0;
+					overflow: hidden;
+					@include transition-all(.3s);
+
+					&.expand {
+						opacity: 1;
+						max-height: 200px;
+						overflow: visible;
+						&:after {
+							content: " ";
+							height: 0;
+							width: 0;
+							position: absolute;
+							top: -10px;
+							right: 12.5px;
+							display: block;
+							border-left: 10px solid transparent;
+							border-right: 10px solid transparent;
+							border-bottom: 10px solid $clr-blue-dark;
+						}
+					}	
+				}
+				.input-group {
+					position: relative;
+					.fa-search {
+						position: absolute;
+						top: 10px;
+						left: 10px;
+						color: $clr-meta;
+					}
+					.search-input {
+						padding-left: 30px;
+						height: 35px;
+						width: 100%;
+						color: #666;
+						line-height: 35px;
+						@include border-radius(0);
+					}	
+				}
+				
+			}
+			.search-nav {
+				display: none;
+				visibility: hidden;
+				@include mq($from: tablet) {
+					visibility: visible;
+					display: inline-block;
+					height: 45px;
+					width: 45px;
+					line-height: 45px;
+					text-align: center;
+					background: $clr-blue;
+					color: #fff;
+					font-size: 16px;
+					cursor: pointer;
+					&:hover, &.expand {
+						color: $clr-blue-dark;
+					}	
+				}
+			}
+			.navicon-group {
+				display: none;
+				@include mq($until: tablet) {
+					display: inline-block;
+					float: right;
+					width: 72px;
+					margin-right: -72px;
+					padding-top: 12px;
+					padding-bottom: 12px;
+					.navicon {
+						float: left;
+						height: 35px;
+						width: 35px;
+						line-height: 35px;
+						margin-left: 1px;
+					}
+				}
+			}
+			
+		}
+		
+		.nav {
+			font-size: 14px;
+			position: relative;
+			float: right;
+			width: 100%;
+			float: right;
+			background-color: $clr-blue;
+			background-color: $clr-blue-dark;
+			.nav-menu {
+				float: right;
+				a {
+					color: $clr-white-o9;
+					padding-right: 15px;
+					padding-left: 15px;
+					&:hover {
+						color: $clr-blue;
+					}
+				}
+				@include mq($until: tablet) {
+					position: absolute;
+					right: 0;
+					background: $clr-blue;
+					text-align: right;
+					visibility: hidden;
+					@include border-radius(5px);
+					> li {
+						display: inline-block;
+						width: auto;
+						float: left;
+					}
+					a {
+						&:hover {
+							background: $clr-blue-dark-o5;
+							color: #fff;
+						}
+					}
+					&.expand {
+						visibility: visible;
+						&:before {
+							content: " ";
+							height: 0px;
+							width: 0px;
+							position: absolute;
+							right: 45.5px;
+							top: -8px;
+							display: inline-block;
+							border-left: 8px solid transparent;
+							border-right: 8px solid transparent;
+							border-bottom: 8px solid $clr-blue;
+							margin-left: 10px;
+						}	
+					}
+					
+				}
+			}	
+		}
+
+		.phone-number {
+			position: relative;
+			clear: right;
+			float: right;
+			width: 100%;
+			@include mq($from: tablet) {
+				margin-right: -45px;
+				margin-left: 45px;
+			}
+			.phone-wrap {
+				padding-top: 12px;
+				padding-bottom: 5px;
+				text-align: right;
+				span {
+					margin-left: 15px;
+					white-space: nowrap;
+				} 
+				@include mq($until: tablet) {
+					padding: 0;
+					opacity: 0;
+					top: 0;
+					right: 0;
+					position: absolute;
+					text-align: right;
+					padding-right: 15px;
+					background: $clr-blue;
+					width: auto;
+					max-height: 0;
+					overflow: hidden;
+					@include border-radius(5px);
+					@include transition-all(.2s);
+					&.expand {
+						z-index: 100;
+						opacity: 1;
+						max-height: 250px;
+						line-height: 45px;
+						overflow: visible;
+						&:before {
+							z-index: 1100;
+							content: " ";
+							height: 0px;
+							width: 0px;
+							position: absolute;
+							right: 10px;
+							top: -8px;
+							display: inline-block;
+							border-left: 8px solid transparent;
+							border-right: 8px solid transparent;
+							border-bottom: 8px solid $clr-blue;
+							margin-left: 10px;
+						}
+						span {
+							text-align: right;
+							display: inline-block;
+							width: auto;
+							background: $clr-blue;
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+.hot-news {
+	$padding-left1: 28px;
+	$padding-left2: 105px;
+	background: rgba(0,0,0,.5);
+	.inner-news {
+		position: relative;
+		padding-left: $padding-left1;
+		@include clearfix;
+		@include mq($from: tablet) {
+			padding-left: $padding-left2;
+		}
+		.news-title {
+			display: inline-block;
+			float: left;
+			line-height: 45px;
+			width: $padding-left1;
+			margin-left: -$padding-left1;
+			@include mq($from: tablet) {
+				width: $padding-left2;
+				margin-left: -$padding-left2;	
+			}
+			h5 {
+				display: none;
+				color: #fff;
+				margin: 0;
+				font-size: 14px;
+				font-weight: 500;
+				@include mq($from: tablet) {
+					display: inline-block;
+				}
+			}
+			.fa {
+				line-height: 45px;
+				font-size: 16px;
+				margin-right: 3px;
+			}
+		}
+		.news-desc {
+			color: $clr-white-o9;
+		}
+		.news-slide {
+			float: right;
+			width: 100%;
+			position: relative;
+			.owl-carousel {
+				padding-right: 60px;
+				.owl-wrapper-outer {
+					padding-top: 11px;
+					padding-bottom: 11px;
+				}
+				.owl-controls {
+					position: absolute;
+					top: 0;
+					right: 0;
+					width: 60px;
+					height: 100%;
+					.owl-buttons {
+						height: 100%;
+						display: table;
+						.owl-prev, .owl-next {
+							display: table-cell;
+							vertical-align: middle;
+							height: 100%;
+							width: 30px;
+							text-align: center;
+							font-size: 20px;
+							&:hover {
+								color: $clr-blue;
+							}
+						}	
+					}
+				}
+			}
+		}
+	}
+}
+
+.breadcrumb {
+	background: $clr-black-o5;
+	padding-top: 11px;
+	padding-bottom: 11px;
+
+	ul {	
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		font-size: 15px;
+		
+		li {
+			display: inline-block;
+			&:after {
+				content: "/";
+				display: inline-block;
+				position: relative;
+				right: 0;
+				margin-left: 5px;
+				color: $clr-white-o7;
+			}
+			&:last-child {
+				&:after {
+					display: none;
+				}
+			}
+			a {
+				color: #fff;
+				&:hover {
+					color: $clr-blue-text;
+				}
+			}
+		}
+	}
+}
+.main-nav {
+	.nav  {
+		.navicon {
+			width: 45px;
+			height: 45px;
+			line-height: 45px;
+			font-size: 18px;
+			z-index: 100;	
+			@include mq($from: tablet) {
+				display: none;
+			}	
+		}
+		.nav-menu {
+			font-size: 14px;
+			> li {
+				padding-right: 30px;
+				@include mq($until: tablet) {
+					padding-right: 0;
+					background: $clr-blue;
+					> a {
+						padding-left: 20px;
+						padding-right: 20px;
+						&.expand {
+							color: $clr-blue-dark
+						}
+					}
+				}
+				> a {
+					color: #fff;
+					@include transition-all(.1s);
+					@include mq($until: tablet) {
+						border-bottom: 1px solid #0d65a3;
+						&:hover {
+							background: $clr-blue-dark-o6;
+						}
+					}
+					@include mq($from: tablet) {
+						border-bottom: 0px solid transparent;
+						&:hover {
+							border-bottom: 3px solid $clr-blue;
+						}	
+					}
+				}
+			}
+			
+			.dropdown {
+				&.expand {
+					> a {
+						@include mq($until: tablet) {
+							color: &clr-blue-dark;
+							background: $clr-blue-dark-o5;
+						}
+						@include mq($from: tablet) {
+							font-weight: 500;	
+							color: $clr-blue-text;
+							border-bottom: 3px solid $clr-blue;
+							&:after {
+								border-top: 5px solid $clr-blue-text;
+							}
+						}
+					}
+					> ul {
+						padding-top: 20px;
+						padding-bottom: 20px;
+					}	
+				}
+				a {
+					&:hover &:after {
+						border-top: 5px solid $clr-blue-text;
+					}
+				}
+				
+				> ul {
+					padding: 0;
+					background: $clr-blue-dark;
+					@include transition-all(.1s);
+					@include mq($from: tablet) {
+						border-top-right-radius: 20px;
+						border-bottom-left-radius: 20px; 	
+					}
+					a {
+						color: #fff;
+						padding-right: 25px;
+						padding-left: 25px;
+						&:hover {
+							//color: $clr-blue;
+							background: $clr-blue-o5;
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+.btn-social {
+	font-size: 14px;
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	float: right;
+	margin-left: -10px;
+	li {
+		display: inline-block;
+		float: left;
+		margin-left: 10px;
+		line-height: 45px;
+
+		a {
+			text-align: center;
+			color: $clr-blue;
+			display: inline-block;
+			height: 28px;
+			min-width: 28px;
+			line-height: 28px;
+			padding-left: 8px;
+			padding-right: 8px;
+			background: $clr-white-o7;
+			@include border-radius(3px);
+			&.btn-hilight {
+				background: $clr-blue;
+				color: #fff;
+				font-weight: 500;
+				padding-left: 10px;
+				padding-right: 10px;
+			}
+			&:hover {
+				color: $clr-blue-dark;
+			}
+		}
+	}
+}
+
+.navbar .btn-social {
+	@include mq($until: mobile) {
+		li {
+			display: none;
+			visibility: hidden;	
+		}
+		li:first-child {
+			display: inline-block;
+			visibility: visible;
+		}
+	}
+}
+
+/* ========================================================================= */
+/*  Navigation Bar Layout
+/* ========================================================================= */
+$nav-li-height: 45px;
+.navicon {
+	display: none;
+	@include mq($until: tablet) {
+		display: inline-block;
+	}
+}
+.nav-menu {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+	&.expand {
+		z-index: 1000;
+		> li {
+			opacity: 1;
+			height: $nav-li-height;
+			overflow: visible;
+		}
+	}
+	> li {
+		float: left;
+		opacity: 0;
+		height: 0;
+		overflow: hidden;
+		display: inline-block;
+		width: 100%;
+		@include transition-all;
+		@include mq($from: tablet) {
+			width: auto;
+			opacity: 1;
+			height: $nav-li-height;
+			overflow: visible;
+		}
+		> a {
+			height: $nav-li-height;
+			display: block;
+			line-height: $nav-li-height;
+			@include mq($from: tablet) {
+				display: inline-block;
+			}
+		}	
+	}
+	
+	// nav-menu > dropdown
+	.dropdown {
+		position: relative;
+		// dropdown > a
+		> a {
+			position: relative;
+			&:after {
+				content: " ";
+				height: 1px;
+				width: 1px;
+				position: relative;
+				right: 0;
+				float: right;
+				display: inline-block;
+				border-left: 4px solid transparent;
+				border-right: 4px solid transparent;
+				border-top: 5px solid #fff;
+				margin-left: 10px;
+				@include mq($until: tablet) {
+					top: $nav-li-height / 2 - 2;
+				}
+				@include mq($from: tablet) {
+					float: none;
+				}
+			}
+		}
+		// dropdown.expand
+		&.expand {
+			height: auto;
+			> ul {
+				> li {
+					height: $nav-li-height;
+				}
+			}
+		}
+		// dropdown > ul 
+		> ul {
+			z-index: 1000;
+			margin: 0;
+			padding: 0;
+			list-style: none;
+			@include mq($from: tablet) {
+				position: absolute;
+				left: 0;
+				top: $nav-li-height;
+				display: inline-block;
+			}
+
+			> li {
+				height: 0px;
+				overflow: hidden;
+				@include transition-height(.3s);
+
+				> a {
+					line-height: $nav-li-height;
+					margin: 0;
+					display: block;
+					white-space: nowrap;
+				}
+			}
+		}
+	}
+}
+
+

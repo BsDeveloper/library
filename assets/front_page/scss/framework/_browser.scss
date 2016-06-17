@@ -1,0 +1,41 @@
+.bs-browser {
+	@include box-shadow(0px 1px 4px rgba(0,0,0,.15));
+	@include border-radius(5px);
+	.browser-bar {
+		padding: 2px 15px;
+		height: 34px;
+		line-height: 34px;
+		@include border-radius(5px 5px 0 0);
+		@include bg-gradient(#e5e5e5, #d4d4d4);
+		.bullets i {
+			width: 12px;
+			height: 12px;
+			background: $clr-blue;
+			display: inline-block;
+			margin-right: 8px;
+			@include border-radius(50%);
+			box-shadow: 0px 1px 2px #fff, inset 0px 1px 2px $clr-white-o5;
+			&:nth-child(1) {
+				@include bg-gradient(#f05252, #e34d4d);
+			}
+			&:nth-child(2) {
+				@include bg-gradient(#f7ba33, #e5ac30);
+			}
+			&:nth-child(3) {
+				@include bg-gradient(#80c15c, #73ad53);
+			}
+		}
+	}
+	.browser-wrapper {
+		height: 270px;
+		overflow: hidden;
+		@include border-radius(0 0 5px 5px);
+		.browser-content {
+			width: 100%;
+			height: auto;
+			position: relative;
+			top: 0;
+		}
+	}
+
+}

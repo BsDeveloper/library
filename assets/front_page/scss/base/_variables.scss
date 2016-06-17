@@ -1,0 +1,77 @@
+//===========================================================================
+// Color Libraries 
+//===========================================================================
+
+$clr-blue : #1075bd;
+$clr-blue-o5 : rgba(16,117,189,.5);
+$clr-blue-o6 : rgba(16,117,189,.6);
+$clr-blue-o7 : rgba(16,117,189,.7);
+$clr-blue-o8 : rgba(16,117,189,.8);
+$clr-blue-o9 : rgba(16,117,189,.9);
+
+$clr-blue-dark : #031826;
+$clr-blue-dark-o5 : rgba(3,24,38,.5);
+$clr-blue-dark-o6 : rgba(3,24,38,.6);
+$clr-blue-dark-o7 : rgba(3,24,38,.7);
+$clr-blue-dark-o8 : rgba(3,24,38,.8);
+$clr-blue-dark-o9 : rgba(3,24,38,.9);
+
+$clr-blue-text : #128ae0;
+
+$clr-white : #fff;
+$clr-white-o2 : rgba(255,255,255,.2);
+$clr-white-o3 : rgba(255,255,255,.3);
+$clr-white-o4 : rgba(255,255,255,.4);
+$clr-white-o5 : rgba(255,255,255,.5);
+$clr-white-o6 : rgba(255,255,255,.6);
+$clr-white-o7 : rgba(255,255,255,.7);
+$clr-white-o8 : rgba(255,255,255,.8);
+$clr-white-o9 : rgba(255,255,255,.9);
+
+$clr-black : #000;
+$clr-black-o3 : rgba(0,0,0,.3);
+$clr-black-o4 : rgba(0,0,0,.4);
+$clr-black-o5 : rgba(0,0,0,.5);
+$clr-black-o6 : rgba(0,0,0,.6);
+$clr-black-o7 : rgba(0,0,0,.7);
+$clr-black-o8 : rgba(0,0,0,.8);
+$clr-black-o9 : rgba(0,0,0,.9);
+
+$clr-border : #e0e0e0;
+$clr-header1 : #333;
+$clr-header2 : #444;
+$clr-meta : #999;
+$clr-text : #666;
+$clr-text-light: #fff;
+$clr-h-light : #fff;
+$clr-p-light : rgba(255,255,255,.9);
+
+$clr-bg-default: #fdfdfd;
+$clr-bg-footer: #0a0a0a;
+$clr-bg-dark-o : rgba(32,32,32,0.8);
+$clr-bg-light-o : rgba(255,255,255,0.8);
+
+//===========================================================================
+// Button 
+//===========================================================================
+$clr-btn-default : #666;
+$clr-btn-primary : $clr-blue;
+$pdd-button : 25px;
+$hig-button : 45px;
+$lhi-button : 45px;
+
+//===========================================================================
+// Font
+//===========================================================================
+$fsi-default : 16px;
+$ffa-default : "Titillium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$ffa-header : "Titillium", "Helvetica Neue", Helvetica, Arial, sans-serif;
+
+//===========================================================================
+// Container, Column & Box
+//===========================================================================
+$wid-container : 1170px;
+$pdd-grid : 30px;
+$pdd-box : 25px;
+$brd-radius : 5px;
+$brd-box : $brd-radius;

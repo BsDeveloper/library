@@ -1,0 +1,72 @@
+.main-news {
+	padding-bottom: 0px;
+}
+.main-inner {
+	top: -60px;
+	position: relative;
+	padding-left: 350px;
+	background: #ffffff url("../img/shape/bg_sidebar.png") repeat-y scroll left 0px;
+	@include clearfix;
+	@include box-shadow(0 0 4px $clr-black-o3);
+	@include mq($from: mobile, $until: laptop) {
+		padding-left: 50px;
+		overflow: hidden;
+		background: #ffffff url("../img/shape/bg_sidebar_collapse.png") repeat-y scroll left 0px;
+	}
+	@include mq($until: mobile) {
+		padding-left: 0;
+		background-image: none;
+	}
+	
+	.sidebar {
+		float: left;
+		width: 350px;
+		margin-left: -350px;
+		background-color: #f3f3f3;
+		.sidebar-title {
+			border-bottom: 1px solid $clr-blue;
+			background-color: $clr-blue;
+			h5 {
+				color: #fff;
+			}
+		}
+		@include mq($from: mobile, $until: laptop) {
+		    width: 50px;
+			margin-left: -50px;
+			.sidebar-title {
+				border-bottom: 1px solid $clr-border;
+				background-color: #f3f3f3;
+				h5 { color: $clr-header1 }
+			}
+		}
+		@include mq($until: mobile) {
+			float: none;
+			width: 100%;
+			margin-left: 0;
+		}
+	}
+
+	.content {
+		float: right;
+		width: 100%;
+		.content-title {
+			border-bottom: 1px solid $clr-border;
+			h5 .light {
+				color: $clr-meta;
+			}
+		}
+		@include mq($until: mobile) {
+			float: none;
+		}
+	}
+
+	.sidebar-title, .content-title {
+		color: #fff;
+		height: 60px;
+		padding: 20px 25px;
+		h5 {
+			margin: 0;
+		}
+	}
+		
+}

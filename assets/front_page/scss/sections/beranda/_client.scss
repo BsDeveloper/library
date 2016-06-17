@@ -1,0 +1,29 @@
+.bs-client {
+	.row .col.col-2 {
+		@include mq($from: mobile, $until: tablet) {
+	        width: 50%;
+	    }
+	}
+
+	.client-img {
+		padding: 10px;
+		margin-right: 1px;
+		margin-left: 1px;
+		text-align: center;
+		height: 90px;
+		background-color: $clr-white;
+		border: 1px solid $clr-border;
+		@include border-radius(5px);
+
+		img {
+			width: auto;
+			max-height: 70px;
+			max-width: 100%;
+			display: inline-block;
+		}
+		.vc-table {
+			max-width: 100%;
+			table-layout: fixed;
+		}
+	}
+}

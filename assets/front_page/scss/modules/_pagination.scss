@@ -1,0 +1,44 @@
+.pagination {
+	padding: 20px 25px;
+	.title {
+		text-align: center;
+		margin-bottom: 15px;
+		.fa {
+			margin-right: 5px;
+		}
+	}
+	&.light {
+		padding-top: 30px;
+		padding-bottom: 0;
+		ul.page li a {
+			background-color: #fff;
+		}
+	} 
+	ul.page {
+		list-style: none;
+		padding: 0;
+		margin: 0;
+		text-align: center;
+		li {
+			display: inline-block;
+			margin-bottom: 4px;
+			a {
+				color: #666;
+				font-weight: 500;
+				height: 36px;
+				min-width: 36px;
+				padding-left: 10px;
+				padding-right: 10px;
+				text-align: center;
+				line-height: 36px;
+				display: block;
+				background-color: #f3f3f3;
+				border-bottom: 3px solid $clr-border;
+				&:hover, &.active {
+					color: $clr-blue;
+					border-color: $clr-blue;
+				}
+			}
+		}
+	}
+}

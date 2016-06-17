@@ -1,0 +1,107 @@
+#box-free-course {
+	width: 500px + 260px;
+	position: relative;
+	@include clearfix;
+	.title {
+		float: left;
+		padding: 40px 45px;
+		text-align: center;
+		color: $clr-white-o9;
+		background-color: $clr-blue-dark;
+		width: 260px;
+		max-width: 100%;
+		h1, h2 {
+			color: #fff;
+		}
+		.header {
+			color: #ff4d00;
+			font-size: 55px;
+			margin-bottom: 40px;
+			line-height: 1em;
+			.light {
+				font-weight: normal;
+				font-size: 40px;
+				line-height: 40px;
+				letter-spacing: 2px;
+			}
+		}
+		.sub-header {
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			color: $clr-white-o9;
+			font-weight: normal;
+			margin-bottom: 5px;
+		}
+		.price {
+			font-size: 56px;
+			font-weight: bold;
+			margin-bottom: 10px;
+		}
+		.baba-studio {
+			font-size: 18px;
+			letter-spacing: 1.5px;
+			color: $clr-white-o9;
+			font-weight: normal;
+			border-top: 1px solid $clr-white-o5;
+			border-bottom: 1px solid $clr-white-o5;
+			padding: 12px 10px;
+		}
+	}
+	.form {
+		margin-left: 260px;
+		position: absolute;
+		height: 100%;
+		background-color: #eee;
+		width: 500px;
+		max-width: 100%;
+		float: left;
+		padding: 40px 50px;
+		h4 {
+			text-align: center;
+			margin-bottom: 20px;
+		}
+		input[type=text],
+		input[type=email] {
+			display: block;
+			width: 100%;
+			margin-bottom: 15px;
+		}
+		.radio-group {
+			margin-bottom: 15px;
+			.input-group {
+				white-space: nowrap;
+				display: inline-block;
+			}
+			label {
+				cursor: pointer;
+				margin-right: 10px;
+			}
+		}
+		button {
+			width: 100%;
+			border: none;
+			@include border-radius(5px);
+		}
+	}
+
+	@include mq($until: laptop) {
+		width: 450px;
+		.title {
+			width: 450px;
+		}
+		.form {
+			position: relative;
+			margin-left: 0;
+			padding: 30px 40px;
+		}
+	}
+	@include mq($until: mobile) {
+		width: 320px;
+		.title {
+			width: 320px;
+		}
+		.form {
+			padding: 20px;
+		}
+	}
+}

@@ -1,0 +1,112 @@
+
+.course-menu {
+	position: relative;
+	height: 0;
+
+	.owl-carousel .owl-wrapper-outer {
+		padding-bottom: 10px;
+	}
+
+	.menu-inner {
+		position: relative;
+	}
+
+	.menu-group {
+		position: absolute;
+		width: 100%;
+		top: -70px;
+		height: 70px;
+		padding-left: 40px;
+		padding-right: 40px;
+
+		.owl-carousel {
+			float: left;
+			width: 100%;
+		}
+		.owl-menu-prev, .owl-menu-next {
+			width: 40px;
+			height: 70px;
+			line-height: 65px;
+			text-align: center;
+			font-size: 45px;
+			color: $clr-white-o8;
+			cursor: pointer;
+			&:hover {
+				color: $clr-blue-text;
+				.fa {
+					@include text-shadow(0 0 8px rgba(0,0,0,.9));
+				}
+			}
+		}
+		.owl-menu-prev {
+			float: left;
+			margin-left: -40px;
+		}
+		.owl-menu-next {
+			float: right;
+			margin-right: -40px;
+		}
+	}
+
+	.menu {
+		display: block;
+		position: relative;
+		padding-left: 80px;
+		padding-right: 15px;
+		height: 70px;
+		color: #666;
+		background-color: $clr-bg-default;
+		border-right: 1px solid $clr-border;
+		border-bottom: 1px solid $clr-border;
+		@include transition-all;
+
+		&:hover, &.active {
+			color: #fff;
+			border-bottom: none;
+			background-color: $clr-blue;
+			.icon {
+				img {
+					float: right;
+				}
+			}
+		}
+		&.active {
+			:after {
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				bottom: -10px;
+				left: 50%;
+				margin-left: -10px;
+				display: block;
+				border-left: 10px solid transparent;
+				border-right: 10px solid transparent;
+				border-top: 10px solid $clr-blue;
+			}
+		}
+		.icon {
+			position: absolute;
+			top: 0;
+			left: 0;
+			height: 50px;
+			width: 50px;
+			overflow: hidden;
+			margin: 10px 15px;
+			img {
+				height: 100%;
+				width: auto;
+				max-width: none;
+				&:hover {
+					opacity: 1;
+				}
+			}
+		}
+		.title {
+			display: block;
+			height: 70px;
+			font-weight: 500;
+			font-size: 18px;
+		}
+	}
+}

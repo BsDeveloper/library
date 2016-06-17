@@ -1,0 +1,174 @@
+.bs-marketing-desc {
+	.newspaper {
+		position: relative;
+		@include box-shadow(0 0 5px rgba(0,0,0,.5));
+		img {
+			width: 100%;
+			height: auto;
+		}
+		.btn-zoom {
+			opacity: 0;
+			visibility: hidden;
+			position: absolute;
+			bottom: 0;
+			right: 0;
+			height: 45px;
+			width: 45px;
+			text-align: center;
+			line-height: 45px;
+			background-color: $clr-blue-o5;
+			color: #fff;
+			@include transition-all;
+			&:hover {
+				background-color: $clr-blue-dark-o5;
+			}
+		}
+		&:hover {
+			.btn-zoom {
+				opacity: 1;
+				visibility: visible;
+			}
+		}
+	}
+ 
+	ol {
+		padding-left: 20px;
+		li {
+			margin-bottom: 10px;
+		}
+	}
+}
+
+.bs-marketing-lesson {
+	color: $clr-white-o9;
+
+	.bc-right-img {
+		background: $clr-blue;
+		@include mq($from: tablet) {
+			background: -moz-linear-gradient(left, rgba(16,117,189,1) 0%, rgba(16,117,189,1) 50%, rgba(11,25,38,1) 50%, rgba(11,25,38,1) 100%);
+			background: -webkit-gradient(left top, right top, color-stop(0%, rgba(16,117,189,1)), color-stop(50%, rgba(16,117,189,1)), color-stop(50%, rgba(11,25,38,1)), color-stop(100%, rgba(11,25,38,1)));
+			background: -webkit-linear-gradient(left, rgba(16,117,189,1) 0%, rgba(16,117,189,1) 50%, rgba(11,25,38,1) 50%, rgba(11,25,38,1) 100%);
+			background: -o-linear-gradient(left, rgba(16,117,189,1) 0%, rgba(16,117,189,1) 50%, rgba(11,25,38,1) 50%, rgba(11,25,38,1) 100%);
+			background: -ms-linear-gradient(left, rgba(16,117,189,1) 0%, rgba(16,117,189,1) 50%, rgba(11,25,38,1) 50%, rgba(11,25,38,1) 100%);
+			background: linear-gradient(to right, rgba(16,117,189,1) 0%, rgba(16,117,189,1) 50%, rgba(11,25,38,1) 50%, rgba(11,25,38,1) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1075bd', endColorstr='#0b1926', GradientType=1 );	
+		}
+		
+		.image {
+			padding-right: 0;
+		}
+		.desc {
+			padding: 50px;
+			h3 {
+				color: #fff;
+			}
+			@include mq($until: desktop) {
+				padding: 30px;
+			}
+			@include mq($until: laptop) {
+				padding: 25px;
+			}
+			@include mq($until: tablet) {
+				padding: 15px;
+			}
+		}
+	}
+}
+
+.bs-compare {
+	.img-inline {
+		margin-right: 20px;
+	}
+}
+
+.bs-section-list {
+	position: relative;
+	&:nth-child(odd) {
+		background-color: #ebebeb;
+		background-image: url("../img/shape/bg_ticks.png");
+		background-repeat: repeat;
+	}
+	.list-num {
+		width: 60px;
+		height: 60px;
+		line-height: 60px;
+		font-size: 24px;
+		color: $clr-blue;
+		font-weight: 500;
+		border: 2px solid $clr-border;
+		@include border-radius(50%);
+		background-color: $clr-bg-default;
+		text-align: center;
+		position: absolute;
+		left: 50%;
+		top: -30px;
+		margin-left: -30px;
+	}
+	.entry {
+		h3 {
+			margin-bottom: 25px;
+		}
+		hr {
+			margin-top: 30px;
+			margin-bottom: 30px;
+		}
+	}
+}
+
+.base-box {
+	background-color: #fff;
+	border: 1px solid $clr-border;
+	padding: 20px 25px;
+}
+
+.bs-disclaimer {
+	color: $clr-white-o9;
+	text-align: center;
+	h3 {
+		color: #fff;
+	}
+}
+
+.entry {
+	@include clearfix;
+}
+
+.bs-marketing-reason {
+	.guarantee {
+		@include clearfix;
+		text-align: center;
+		font-size: 32px;
+		padding: 30px;
+		height: 65px;
+		margin-top: 40px;
+		margin-bottom: 40px;
+		@include border-radius(5px);
+
+		.inner-guarantee {
+				position: relative;
+				top: -45px;
+				color: #fff;
+				font-weight: 500;
+
+
+			.percent {
+				font-size: 40px;
+				//font-weight: bold;
+				background-color: $clr-blue;
+				border: 3px solid $clr-bg-default;
+				@include border-radius(50%);
+				height: 100px;
+				width: 100px;
+				display: inline-block;
+				line-height: 85px;
+			}	
+		}
+		
+	}
+}
+
+.bs-marketing-discount {
+	h4 {
+		color: #fff;
+	}
+}

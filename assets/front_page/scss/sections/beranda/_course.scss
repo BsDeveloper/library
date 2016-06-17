@@ -1,0 +1,16 @@
+.bs-course {
+	.course {
+		padding-left: 95px;
+		.icon {
+			float: left;
+			margin-left: -95px;
+			margin-top: 5px;
+			width: 80px;
+			height: auto;
+		}
+		.desc {
+			float: right;
+			width: 100%;
+		}
+	}
+}

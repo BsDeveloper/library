@@ -1,0 +1,20 @@
+input[type=text],
+input[type=date],
+input[type=email],
+input[type=password],
+select {
+	height: 40px;
+	line-height: 40px;
+	display: block;
+	border: 1px solid $clr-border;
+	padding-left: 10px;
+	@include border-box;
+	@include border-radius(5px);
+	&:focus {
+		border-color: $clr-blue;
+	}
+}
+
+input[type=checkbox] {
+	display: inline-block;
+}

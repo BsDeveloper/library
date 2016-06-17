@@ -1,0 +1,90 @@
+.bs-service {
+	color: $clr-white-o9;
+	@include bg-overlay($clr-blue-o5);
+	@include bg-parallax("../img/full/bg_bs_service.jpg");
+	.service {
+		position: relative;
+		width: 350px;
+		max-width: 100%;
+		@include clearfix;
+
+		&.left {
+			float: right;
+			padding-right: 110px;
+			.icon {
+				float: right;
+				margin-right: -110px;
+				&:after {
+					left: -10px;
+					border-right: 10px solid $clr-white;
+				}	
+			}
+			.desc {
+				right: 0;
+				text-align: right;
+				float: left;
+				padding-right: 110px;
+			}
+		}
+
+		&.right {
+			float: left;
+			padding-left: 110px;
+			.icon {
+				float: left;
+				margin-left: -110px;
+				&:after {
+					right: -10px;
+					border-left: 10px solid $clr-white;
+				}	
+			}
+			.desc {
+				left: 0;
+				text-align: left;
+				float: right;
+				padding-left: 110px;
+			}
+		}
+
+		.icon {
+			width: 90px;
+			height: 90px;
+			text-align: center;
+			background: $clr-white;
+			@include border-radius(5px);
+			padding-top: 15px;
+			padding-bottom: 10px;
+			position: relative;
+			&:after {
+				content: " ";
+				height: 0;
+				width: 0;
+				position: absolute;
+				top: 50%;
+				right: -10px;
+				margin-top: -10px;
+				display: block;
+				border-top: 10px solid transparent;
+				border-bottom: 10px solid transparent;
+			}
+			img {
+				display: inline-block;
+			}
+		}
+		.desc {
+			width: 100%;
+			display: block;
+			position: absolute;
+			height: 100%;
+			.vc-table {
+				table-layout: fixed;
+				width: 100%;
+			}
+			h4 {
+				color: $clr-white;
+				margin-bottom: 0;
+				line-height: 1.6em;
+			}
+		}
+	}
+}

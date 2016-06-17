@@ -1,0 +1,67 @@
+/* ========================================================================= */
+/* Scroll Down Up
+/* ========================================================================= */
+
+.scroll-down {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: -32px;
+	z-index: 10;
+	height: 32px;
+	a {
+		height: 32px;
+		display: inline-block;
+		&:hover .fa, &:hover .fa.fa-2x {
+			color: $clr-blue;
+		}
+		img {
+			&:hover {
+				opacity: 1;
+			}
+		}
+		.fa {
+			position: relative;
+			top: -25px;
+			display: block;
+			text-align: center;
+			font-size: 14px;
+			color: #989898;
+		}
+		.fa.fa-2x {
+			margin-top: -12px;
+			font-size: 24px;
+			color: #666;
+		}
+	}
+}
+
+.scroll-up {
+	text-align: center;
+	position: absolute;
+	width: 100%;
+	top: -.5px;
+	z-index: 10;
+	height: 32px;
+	display: block;
+	a {
+		height: 32px;
+		display: inline-block;
+		&:hover .fa, &:hover .fa.fa-2x {
+			color: $clr-blue;
+		}
+		.fa {
+			position: relative;
+			top: -25px;
+			display: block;
+			text-align: center;
+			font-size: 14px;
+			color: #989898;
+		}
+		.fa.fa-2x {
+			margin-top: -25px;
+			font-size: 24px;
+			color: #666;
+		}
+	}
+}

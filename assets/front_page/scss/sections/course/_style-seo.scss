@@ -1,0 +1,65 @@
+.bs-seo-student {
+	.student {
+		text-align: center;
+		background-color: #f2f2f2;
+		border: 1px solid $clr-border;
+		padding: 20px 25px;	
+		@include border-radius(5px);
+
+		.top-one {
+			display: block;
+			margin-bottom: 10px;
+			img {
+				display: inline-block;
+			}
+		}
+		a.link {
+			width: 100%;
+			text-align: center;
+			font-weight: 500;
+			font-size: 18px;
+			@include word-wrap;
+		}
+		.foto {
+			height: 110px;
+			width: 110px;
+			display: inline-block;
+			border: 1px solid $clr-border;
+			@include border-radius(50%);
+			overflow: hidden;
+		}
+		.name {
+			font-size: 18px;
+			font-weight: 500;
+			font-color: $clr-header2;
+		}
+		.entry {
+			margin-bottom: 15px;
+		}
+		.btn-more {
+			width: 100%;
+		}	
+	}
+	
+}
+
+.bs-seo-reason {
+	.reason {
+		text-align: center;
+		padding: 15px 25px;
+
+		.icon {
+			display: block;
+			margin-bottom: 15px;
+
+			img {
+				display: inline-block;
+				height: 73px;
+			}
+		}
+		.title {
+			min-height: 50px;
+			margin-bottom: 20px;
+		}
+	}
+}

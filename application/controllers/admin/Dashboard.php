@@ -19,7 +19,7 @@ class dashboard extends MY_Controller {
 			$data['title'] 			= 'Halaman Beranda | '.$judul;
 			$data['heading'] 		= 'Dashboard Beranda';
 			$data['page']			= 'admin/page_dashboard';
-			$data['visitor_list']	= $this->db->query("select *,count(*) as total from log_visitor where month(create_date) = month(now()) group by date(create_date)");
+			$data['visitor_list']	= $this->db->query("select *,count(*) as total from log_visitor where month(create_date) = month(now()) and year(create_date) = year(now()) group by date(create_date)");
 			$data['new_user_list']	= $this->db->query("select * from user order by user_id desc limit 10");
 			$this->load->view('template', $data);
 

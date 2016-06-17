@@ -1,0 +1,15 @@
+//=========================================================================
+// Viewport Checker Animation Tools
+//=========================================================================
+.hidden {
+    opacity: 0;
+	//@include transition-all(.9s);
+}
+
+.visible {
+     opacity: 1;
+}
+
+.has-animate {
+	overflow: hidden;
+}

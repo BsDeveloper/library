@@ -1,0 +1,49 @@
+@mixin a-bg-dark {
+	color: #fff;
+	&:hover {
+		color: $clr-blue-text;
+	}
+}
+
+.btn-group {
+	width: 100%;
+	text-align: center;
+	display: block;
+	margin-right: -30px;
+	position: relative;
+
+	.btn {
+		margin-top: 30px;
+		margin-left: 10px;
+		margin-right: 10px;
+	}
+}
+
+.btn {
+	display: inline-block;
+	padding: 15px 30px;
+	font-weight: 500;
+	font-size: 16px;
+	background-color: $clr-blue;
+	color: #fff;
+	@include border-radius(5px);
+	&:hover {
+		color: $clr-blue-dark;
+		background-color: #107ecc;
+	}
+}
+
+.btn.btn-light {
+	background: #fff;
+	color: $clr-blue;
+	@include border-radius(5px);
+	&:hover {
+		color: $clr-blue-dark;
+	}
+}
+
+.btn.btn-full {
+	width: 100%;
+	margin-left: 0;
+	@include border-radius(5px);
+}

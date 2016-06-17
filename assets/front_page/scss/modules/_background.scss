@@ -1,0 +1,15 @@
+.bg-blue {
+	background-color: $clr-blue;
+}
+
+.bg-ticks {
+	background-color: #ebebeb;
+	background-image: url("../img/shape/bg_ticks.png");
+	background-repeat: repeat;
+}
+
+.bg-blue-ticks {
+	background-color: $clr-blue;
+	background-image: url("../img/shape/bg_blue_ticks.png");
+	background-repeat: repeat;
+}

@@ -1,0 +1,101 @@
+.bs-error-404 {
+	position: fixed;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 100%;
+	width: 100%;
+	color: $clr-white-o9;
+	background-color: $clr-blue-dark;
+
+	.vc-cell {
+		max-width: 100%;
+	}
+
+	.inner-error {
+		width: 380px;
+		max-width: 100%;
+		margin-left: auto;
+		margin-right: auto;
+		@include mq($until: mobile) {
+			width: 300px;
+			text-align: center;
+		}
+	}
+
+	.error {
+		padding-right: 150px;
+		position: relative;
+		@include clearfix;
+		@include mq($until: mobile) {
+			padding-right: 0;
+
+			.type {
+				float: none;
+			}
+			.mascot {
+				display: none;
+			}
+		}
+
+		.type {
+			float: left;
+			width: 100%;
+			h1 {
+				color: #fff;
+				font-size: 140px;
+				margin: 0;
+				line-height: 1em;
+			}
+			h2 {
+				font-size: 24px;
+				color: #fff;
+				margin: 0;
+				line-height: 1em;
+			}
+		}
+		.mascot {
+			float: right;
+			width: 140px;
+			height: auto;
+			margin-right: -150px;
+
+		}
+	}
+	.alert {
+		margin-top: 15px;
+	}
+	.btn-group {
+		position: relative;
+		@include clearfix;
+		@include mq($until: mobile) {
+			.btn {
+				margin: 10px 0 0 0;
+				width: 100%;
+				display: block;
+			}
+		}
+
+		.btn {
+			padding: 10px 30px;
+		}
+		.btn-back {
+			margin-left: 0;
+			float: left;
+			border: 2px solid $clr-blue;
+		}
+		.btn-help {
+			float: left;
+			border: 2px solid $clr-blue;
+			background-color: transparent;
+			color: $clr-blue-text;
+
+			&:hover {
+				color: #fff;
+				border-color: #fff;
+				background-color: $clr-white-o2;
+			}
+		}	
+	}
+}

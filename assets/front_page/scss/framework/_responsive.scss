@@ -1,0 +1,148 @@
+//=========================================================================
+// Responsive
+//=========================================================================
+
+.clearfix {
+	@include clearfix;
+}
+
+.wrapper {
+	min-width: 320px;
+	@include clearfix;
+}
+
+.container {
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+	max-width: $wid-container;
+	@include clearfix;
+	@include mq($until: mobile) {
+		padding-left: 10px;
+		padding-right: 10px;
+	}
+}
+
+.row {
+	margin-top: -30px;
+	margin-left: -30px;
+	@include clearfix;
+	@include mq($until: tablet) {
+		margin-top: -20px;
+		margin-left: -20px;
+	}
+
+	.col {
+		float: left;
+		padding-top: 30px;
+		padding-left: 30px;
+		position: relative;
+		min-height: 1px;
+		width: 100%;
+		@include mq($until: tablet) {
+			padding-top: 20px;
+			padding-left: 20px;
+		}
+	}	
+
+	@include mq($from: tablet) {
+		.col-1	{ width: 25% }
+		.col-2	{ width: 25% }
+		.col-3	{ width: 25% }
+		.col-4	{ width: 50% }
+		.col-5	{ width: 50% }
+		.col-6	{ width: 50% }
+		.col-7	{ width: 50% }
+		.col-8	{ width: 50% }
+		.col-9	{ width: 50% }
+		.col-10	{ width: 100% }
+		.col-11	{ width: 100% }
+		.col-12	{ width: 100% }	
+	}
+
+	@include mq($from: laptop) {
+		.col-1	{ width: 8.333333333% }
+		.col-2	{ width: 16.66666667% }
+		.col-3	{ width: 25% }
+		.col-4	{ width: 33.33333333% }
+		.col-5	{ width: 41.66666667% }
+		.col-6	{ width: 50% }
+		.col-7	{ width: 58.33333333% }
+		.col-8	{ width: 66.66666667% }
+		.col-9	{ width: 75% }
+		.col-10	{ width: 83.33333333% }
+		.col-11	{ width: 91.66666667% }
+		.col-12	{ width: 100% }	
+	}
+
+}
+	
+
+/*=========================================================================*/
+/* Viewport Indicator
+/*=========================================================================*/
+#viewport-indicator {
+	font-family: "";
+	height: 0;
+
+	@include mq($from: phone) {
+		font-family: "@phone";
+	}
+
+	@include mq($from: mobile) {
+		font-family: "@mobile";
+	}
+
+	@include mq($from: tablet) {
+		font-family: "@tablet";
+	}
+
+	@include mq($from: laptop) {
+		font-family: "@laptop";
+	}
+
+	@include mq($from: desktop) {
+		font-family: "@laptop";
+	}
+
+}
+
+
+/*=========================================================================*/
+/* Padding Section
+/*=========================================================================*/
+.mt-10 {
+	margin-top: 10px;
+}
+.mt-20 {
+	margin-top: 20px;
+}
+.mt-30 {
+	margin-top: 30px;
+}
+
+.ptb-80 {
+	padding-top: 80px;
+	padding-bottom: 80px;
+}
+.ptb-70 {
+	padding-top: 70px;
+	padding-bottom: 70px;
+}
+.ptb-60 {
+	padding-top: 60px;
+	padding-bottom: 60px;
+}
+.ptb-50 {
+	padding-top: 50px;
+	padding-bottom: 50px;
+}
+.ptb-40 {
+	padding-top: 40px;
+	padding-bottom: 40px;
+}
+.ptb-30 {
+	padding-top: 30px;
+	padding-bottom: 30px;
+}
